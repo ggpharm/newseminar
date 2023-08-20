@@ -15,3 +15,5 @@ int B = int.Parse(Console.ReadLine());
 {
     Console.WriteLine("Число " + B + " больше");   
 }
+ 
+ 
