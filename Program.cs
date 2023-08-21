@@ -1,7 +1,9 @@
 ﻿//Задания 2,4,6,8
 //Нужно выбрать задание из списка
 
-    Console.WriteLine("Выберите задание, доступные 2,4,6 и 8");
+using System.ComponentModel.Design;
+
+Console.WriteLine("Выберите задание, доступные 2,4,6 и 8");
 int num = int.Parse(Console.ReadLine());
  
 switch (num)
@@ -76,7 +78,7 @@ switch (num)
         int X = int.Parse(Console.ReadLine());
 
         if (X%2 == 0)
-        Console.WriteLine("Число четное");
+            Console.WriteLine("Число четное");
         else
             Console.WriteLine("Число не четное");
             Console.WriteLine(" ");
@@ -84,8 +86,25 @@ switch (num)
 
     case 8:
         Console.WriteLine("Вы выбрали задание 8");
-        Console.WriteLine("8");
-        // Домашка 4
+        // Домашка 8
+        Console.WriteLine("Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.");
+        Console.WriteLine("Введите число N");
+
+        int N = int.Parse(Console.ReadLine());
+        int chet = 0;
+        
+        if (N > 1) //Остановка скрипта, раз не будет четных и положительных
+
+         for (int i = 1; i <= N; i++)
+             {   
+               if (i%2 == 0)
+                { 
+                Console.WriteLine("Четное число " + i);    
+                }   
+             }
+        else Console.WriteLine("Четных положительных чисел нет"); 
+        Console.WriteLine(" ");   
+
         break;
 }
 
